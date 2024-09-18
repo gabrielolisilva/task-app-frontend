@@ -5,10 +5,13 @@ import RoutesApp from "./RoutesApp.tsx";
 import { ToastContainer } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
+import { UserProvider } from "./context/UserProvider.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <RoutesApp />
-    <ToastContainer />
+    <UserProvider>
+      <RoutesApp />
+      <ToastContainer />
+    </UserProvider>
   </StrictMode>
 );

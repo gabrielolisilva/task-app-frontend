@@ -3,6 +3,7 @@ import Home from "./Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ProtectedRoute from "./ProtectedRoute";
+import Team from "./pages/Team";
 
 const RoutesApp = () => {
   return (
@@ -18,6 +19,7 @@ const RoutesApp = () => {
             </ProtectedRoute>
           }
         />
+        <Route path={`/team/:id`} element={<Team />} />
       </Routes>
     </Router>
   );
